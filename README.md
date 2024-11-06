@@ -10,7 +10,7 @@ npm install remix-custom-router
 
 ```typescript
 
-import viteCustomRoutesPlugin from 'remix-custom-routes';
+import viteCustomRoutesPlugin from 'remix-custom-router';
 
 export default {
     plugins: [
@@ -29,7 +29,7 @@ npm run dev
 
 ## Example
 ```typescript
-import viteCustomRoutesPlugin from 'remix-custom-routes';
+import viteCustomRoutesPlugin from 'remix-custom-router';
 
 export default defineConfig({
     plugins: [
