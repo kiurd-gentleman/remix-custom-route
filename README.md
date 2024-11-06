@@ -10,11 +10,11 @@ npm install remix-custom-router
 
 ```typescript
 
-import customRoutesPlugin from 'remix-custom-routes';
+import customRoutesPlugin from 'remix-custom-router';
 
 export default {
     plugins: [
-        customRoutesPlugin({ routesDir: 'src/routes' })
+        customRoutesPlugin({ routesDir: 'app/routes' })
     ],
 };
 ```
@@ -25,11 +25,11 @@ export default {
 npm run dev
 ```
 ## Options
-- `routesDir`: The directory containing route files. Default: `src/routes`
+- `routesDir`: The directory containing route files. Default: `app/routes`
 
 ## Example
 ```typescript
-import customRoutesPlugin from 'remix-custom-routes';
+import customRoutesPlugin from 'remix-custom-router';
 
 export default defineConfig({
     plugins: [
