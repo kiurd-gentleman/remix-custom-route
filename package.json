@@ -9,6 +9,8 @@
     "prepare": "npm run build"
   },
   "keywords": [
+    "package",
+    "npm",
     "javascript",
     "react",
     "remix",
