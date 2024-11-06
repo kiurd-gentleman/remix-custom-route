@@ -4,7 +4,7 @@ This Vite plugin dynamically generates routes based on the file structure in a s
 
 ## Installation
 ```bash
-npm install vite-custom-routes
+npm install vite-custom-router
 ```
 ## Uses
 add the plugin to your vite.config.js file and pass the routesDir option with the path to the directory containing your routes.
