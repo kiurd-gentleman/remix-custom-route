@@ -8,6 +8,17 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
+  "keywords": [
+    "javascript",
+    "react",
+    "remix",
+    "router",
+    "custom",
+    "custom router",
+    "remix custom router",
+    "remix custom routes",
+    "custom routes"
+  ],
   "dependencies": {
     "vite": "^4.0.0"
   },
