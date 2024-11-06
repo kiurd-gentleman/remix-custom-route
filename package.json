@@ -1,5 +1,5 @@
 {
-  "name": "remix-custom-routes",
+  "name": "remix-custom-router",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
