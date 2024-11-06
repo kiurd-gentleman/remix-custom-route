@@ -1,4 +1,4 @@
-export default function viteCustomRoutesPlugin(options: {
+export default function customRoutesPlugin(options: {
     routesDir: string;
 }): {
     name: string;

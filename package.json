@@ -1,8 +1,9 @@
 {
-  "name": "vite-custom-routes",
+  "name": "remix-custom-routes",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"

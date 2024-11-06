@@ -1,7 +1,7 @@
 // src/customRoutes.ts
 import { promises as fs } from 'fs';
 import path from 'path';
-export async function defineCustomRoutes(dir, basePath = '') {
+export async function customRoutes(dir, basePath = '') {
     const entries = await fs.readdir(dir, { withFileTypes: true });
     const routes = await Promise.all(entries.map(async (entry) => {
         const fullPath = path.join(dir, entry.name);
@@ -12,7 +12,7 @@ export async function defineCustomRoutes(dir, basePath = '') {
             .replace(/\[(.+)\]/, ":$1"))
             .replace(/\\/g, "/");
         if (entry.isDirectory()) {
-            return defineCustomRoutes(fullPath, routePath);
+            return customRoutes(fullPath, routePath);
         }
         else if (entry.isFile() && entry.name.endsWith(".tsx")) {
             return { path: routePath, file: fullPath.replace(/^src[\\/]/, "").replace(/\\/g, "/") };
