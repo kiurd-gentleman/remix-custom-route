@@ -9,6 +9,7 @@
     "prepare": "npm run build"
   },
   "keywords": [
+    "vite plugin",
     "package",
     "npm",
     "javascript",
@@ -16,10 +17,16 @@
     "remix",
     "router",
     "custom",
+    "remix router",
+    "remix routes",
+    "dynamic routes",
+    "dynamic router",
+    "dynamic routing",
     "custom router",
     "remix custom router",
     "remix custom routes",
-    "custom routes"
+    "custom routes",
+    "vite"
   ],
   "dependencies": {
     "vite": "^4.0.0"
