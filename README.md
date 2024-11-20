@@ -1,10 +1,6 @@
-Here’s a detailed and SEO-friendly description for your README file:
+# remix-custom-router
 
----
-
-# remix-custom-routes
-
-`remix-custom-routes` is a Vite plugin for dynamically managing Remix project routes. It simplifies route discovery and configuration by analyzing your project's folder structure, allowing you to focus on building features rather than handling manual route setups.
+`remix-custom-router` is a Vite plugin for dynamically managing Remix project routes. It simplifies route discovery and configuration by analyzing your project's folder structure, allowing you to focus on building features rather than handling manual route setups.
 
 ## Features
 
@@ -15,7 +11,7 @@ Here’s a detailed and SEO-friendly description for your README file:
 ## Installation
 
 ```bash
-npm install remix-custom-routes
+npm install remix-custom-router
 ```
 
 ## Usage
@@ -25,15 +21,18 @@ npm install remix-custom-routes
 Add the plugin to your `vite.config.ts`:
 
 ```typescript
-import viteCustomRoutesPlugin from 'remix-custom-routes';
+import { customRoute } from "remix-custom-router";
 
-export default {
-    plugins: [
-        viteCustomRoutesPlugin({
-            routesDir: 'app/routes', // Specify your routes directory
-        }),
-    ],
-};
+export default defineConfig({
+   plugins: [
+      remix({
+         routes : async (defineRoutes) => {
+            return customRoute("app/routes", defineRoutes);
+         }
+      }),
+      tsconfigPaths(),
+   ],
+});
 ```
 
 ### Folder Structure
@@ -71,7 +70,7 @@ routes/
 You can access the `id` parameter in your component using Remix's `useParams` hook:
 
 ```tsx
-import { useParams } from "remix";
+import { useParams } from "@remix-run/react";
 
 export default function User() {
     const { id } = useParams();

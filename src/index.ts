@@ -1,13 +1,14 @@
-// src/index.ts
-import { customRoutes } from './customRoutes.js';
 
-export default function customRoutesPlugin(options: { routesDir: string }) {
-    return {
-        name: 'remix-custom-routes',
-        async configResolved(config: any) {
-            const routes = await customRoutes(options.routesDir);
-            console.log("Generated routes:", routes);
-            console.log("Vite config:", config);
-        },
-    };
+import { getRoutes } from "./customRoutes.js";
+export async function customRoute(routesDir: string, defineRoutes: any) {
+    console.log("Discovered Routes:", routesDir, defineRoutes);
+    const routes = await getRoutes("app/routes");
+
+    return defineRoutes((route: any) => {
+        routes.forEach(({ path, file }) => {
+            route(path, `./${file}`);
+        });
+    });
 }
+
+
