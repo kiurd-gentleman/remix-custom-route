@@ -8,6 +8,10 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiurd-gentleman/remix-custom-router"
+  },
   "keywords": [
     "vite plugin",
     "package",
